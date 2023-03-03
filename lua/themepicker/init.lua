@@ -78,6 +78,6 @@ M.toggle_menu = function()
     _is_open = false
   end
   _is_open = true
-  M._picker_opts:find()
+  _picker_opts:find()
 end
 return M
