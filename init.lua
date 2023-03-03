@@ -11,4 +11,7 @@ local M = {}
 
 M._create_picker = themepicker._pickers.new(themepicker.win_opts, themepicker.opts)
 
+M.open_picker = function()
+  M._create_picker:find()
+end
 return M
