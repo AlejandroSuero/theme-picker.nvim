@@ -11,4 +11,4 @@ local M = {}
 
 M._create_picker = themepicker._pickers.new(themepicker.win_opts, themepicker.opts)
 
-vim.keymap.set('n', '<leader>p', function() M._create_picker:find() end)
+return M
