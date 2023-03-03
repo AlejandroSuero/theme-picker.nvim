@@ -69,4 +69,15 @@ local themes = M._pickers.new(M.win_opts, M.opts)
 
 themes:find()
 ]]
+local _is_open = false
+local _picker_opts = M._pickers.new(M.win_opts, M.opts)
+
+M.toggle_menu = function()
+  if (_is_open) then
+    M._actions.close(0)
+    _is_open = false
+  end
+  _is_open = true
+  M._picker_opts:find()
+end
 return M
