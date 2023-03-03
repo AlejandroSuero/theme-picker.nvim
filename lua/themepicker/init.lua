@@ -7,7 +7,7 @@ local configs = require('themepicker.configs')
 
 local M = {}
 local _is_open = false
-local _picker_opts = configs._pickers.new(configs.win_opts, configs.opts)
+local themes = configs._themes
 
 M.toggle_menu = function()
   if (_is_open) then
@@ -15,6 +15,6 @@ M.toggle_menu = function()
     _is_open = false
   end
   _is_open = true
-  _picker_opts:find()
+  themes:find()
 end
 return M

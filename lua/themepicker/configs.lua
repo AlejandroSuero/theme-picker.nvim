@@ -65,4 +65,6 @@ M.opts = {
   end
 }
 
+M._themes = pickers.new(M.win_opts, M.opts)
+
 return M
