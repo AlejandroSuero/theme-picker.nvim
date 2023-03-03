@@ -37,29 +37,19 @@ M._get_prev_theme   = function(prompt_bufnr)
   M._set_theme()
 end
 
-M._max_height       = vim.o.lines - 10
-M._max_width        = vim.o.columns - 10
-M._height           = #M._installed_themes
-M._width            = 0.5
-
-if (#M._installed_themes < M._max_height) then
-  M._height = 0.5
-end
-
-
-M.win_opts = {
+M.win_opts          = {
   results_title    = ' Themes ',
   prompt_title     = ' Find your theme ',
   layout_strategy  = 'vertical',
   layout_config    = {
-    height = M._height,
-    width = M._width,
+    height = 0.5,
+    width = 0.5,
     prompt_position = 'top',
   },
   sorting_strategy = 'ascending',
 }
 
-M.opts = {
+M.opts              = {
   finder = M._finders.new_table(M._installed_themes),
   sorter = M._sorters.get_generic_fuzzy_sorter({}),
   attach_mappings = function(prompt_bufnr, map)
@@ -76,6 +66,6 @@ M.opts = {
   end
 }
 
-M._themes = pickers.new(M.win_opts, M.opts)
+M._themes           = pickers.new(M.win_opts, M.opts)
 
 return M
