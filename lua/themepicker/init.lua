@@ -9,6 +9,6 @@ local M = {}
 local themes = configs._themes
 
 M.open_menu = function()
-  themes:find()
+	themes:find()
 end
 return M
